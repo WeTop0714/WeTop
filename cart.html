@@ -101,10 +101,33 @@ cart.forEach((item,index)=>{
 sum += item.price;
 
 container.innerHTML += `
-<div style="border:1px solid #ddd;padding:15px;margin-bottom:15px;border-radius:10px;">
+<div class="cart-item">
+
+<div class="cart-info">
+
 <h3>${item.name}</h3>
-<p>Price: ₹${item.price}</p>
-<button onclick="removeFromCart(${index})">Remove</button>
+
+<p>⭐⭐⭐⭐⭐</p>
+
+<p><strong>₹${item.price}</strong></p>
+
+<p style="color:green;">✔ In Stock</p>
+
+<p style="font-size:14px;color:#666;">
+🚚 Free Delivery
+</p>
+
+</div>
+
+<div class="cart-actions">
+
+<button class="remove-btn"
+onclick="removeFromCart(${index})">
+🗑 Remove
+</button>
+
+</div>
+
 </div>
 `;
 
