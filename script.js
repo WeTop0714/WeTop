@@ -23,17 +23,6 @@ function addToCart(name, price){
     console.log(cart);
 
     alert("✅ " + name + " added to cart!");
-
-}
-
-    cart.push({
-        name: name,
-        price: price
-    });
-
-    saveCart();
-
-    alert("✅ " + name + " added to cart!");
 }
 
 // Get cart
