@@ -1,7 +1,33 @@
 /* ===========================
    WeTop v2 - CSS Part 1
 =========================== */
+/* ===================================
+   WeTop v4 - Dark Theme Variables
+=================================== */
 
+:root{
+
+--bg:#0d1117;
+--card:#161b22;
+--card-hover:#21262d;
+
+--text:#f8fafc;
+--text-light:#9ca3af;
+
+--primary:#3b82f6;
+--primary-hover:#2563eb;
+
+--success:#22c55e;
+--danger:#ef4444;
+--warning:#f59e0b;
+
+--border:#30363d;
+
+--shadow:0 12px 35px rgba(0,0,0,.45);
+
+--radius:18px;
+
+}
 *{
 margin:0;
 padding:0;
