@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Shopping Cart | WeTop</title>
+<title>Cart | WeTop</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -33,9 +25,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <div class="search-box">
 <input type="text" placeholder="Search products...">
-<button>
-<i class="fa-solid fa-magnifying-glass"></i>
-</button>
+<button><i class="fa-solid fa-magnifying-glass"></i></button>
 </div>
 
 <div class="nav-icons">
@@ -60,15 +50,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </header>
 
 <nav class="menu">
-
 <a href="index.html">Home</a>
-
 <a href="products.html">Products</a>
-
 <a href="about.html">About</a>
-
 <a href="contact.html">Contact</a>
-
 </nav>
 
 <section class="cart-page">
@@ -81,58 +66,55 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <div class="cart-buttons">
 
-<a href="products.html" class="btn">Continue Shopping</a>
+<a href="products.html" class="btn">
+Continue Shopping
+</a>
 
-<button class="btn">Checkout</button>
+<button class="btn">
+Checkout
+</button>
 
 </div>
 
 </section>
+
+<script src="script.js"></script>
+
 <script>
 
 const cart = getCart();
 
-const cartContainer = document.getElementById("cartItems");
+const cartItems = document.getElementById("cartItems");
 
-const totalElement = document.getElementById("cartTotal");
+const cartTotal = document.getElementById("cartTotal");
 
 let total = 0;
 
 if(cart.length===0){
 
-cartContainer.innerHTML="<h2>Your cart is empty 🛒</h2>";
+cartItems.innerHTML="<h2>Your cart is empty 🛒</h2>";
 
 }else{
 
-cart.forEach((product,index)=>{
+cart.forEach(function(product,index){
 
 total+=product.price;
 
-cartContainer.innerHTML+=`
-
+cartItems.innerHTML+=`
 <div class="cart-item">
-
 <h3>${product.name}</h3>
-
 <p>₹${product.price}</p>
-
-<button onclick="removeFromCart(${index})">
-
-Remove
-
-</button>
-
+<button onclick="removeFromCart(${index})">Remove</button>
 </div>
-
 `;
 
 });
 
 }
 
-totalElement.innerHTML="Total : ₹"+total;
-<script src="script.js"></script>
+cartTotal.innerHTML="Total : ₹"+total;
 
-<script>
-...
 </script>
+
+</body>
+</html>
