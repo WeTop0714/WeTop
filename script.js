@@ -1,50 +1,49 @@
-alert("Script Loaded!");
-
 // ===============================
-// WeTop v3 - Shopping Cart
+// WeTop Cart System v4
 // ===============================
 
 // Load cart from Local Storage
-let cart = [];
-
-try {
-    cart = JSON.parse(localStorage.getItem("cart")) || [];
-} catch (e) {
-    cart = [];
-    localStorage.removeItem("cart");
+function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
-// Save cart
-function saveCart() {
+// Save cart to Local Storage
+function saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Add product
-function addToCart(name, price){
+// Add product to cart
+function addToCart(name, price) {
+
+    let cart = getCart();
 
     cart.push({
-        name:name,
-        price:price
+        name: name,
+        price: price
     });
 
-    saveCart();
-
-    alert(localStorage.getItem("cart"));
+    saveCart(cart);
 
     alert("✅ " + name + " added to cart!");
-}
-
-// Get cart
-function getCart() {
-    return cart;
 }
 
 // Remove product
 function removeFromCart(index) {
 
+    let cart = getCart();
+
     cart.splice(index, 1);
 
-    saveCart();
+    saveCart(cart);
+
+    location.reload();
+
+}
+
+// Clear cart
+function clearCart() {
+
+    localStorage.removeItem("cart");
 
     location.reload();
 
