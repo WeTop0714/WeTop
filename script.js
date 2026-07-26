@@ -1,33 +1,40 @@
-// =========================
-// WeTop v3 JavaScript
-// =========================
+// ===============================
+// WeTop v3 - Shopping Cart
+// ===============================
 
-// Shopping cart
-let cart = [];
+// Load cart from Local Storage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Add product to cart
-function addToCart(name, price){
-
-cart.push({
-name:name,
-price:price
-});
-
-alert("✅ " + name + " added to cart!");
-
-console.log(cart);
-
+// Save cart
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Wishlist
-let wishlist = [];
+// Add product
+function addToCart(name, price) {
 
-function addToWishlist(name){
+    cart.push({
+        name: name,
+        price: price
+    });
 
-wishlist.push(name);
+    saveCart();
 
-alert("❤️ " + name + " added to wishlist!");
+    alert("✅ " + name + " added to cart!");
+}
 
-console.log(wishlist);
+// Get cart
+function getCart() {
+    return cart;
+}
+
+// Remove product
+function removeFromCart(index) {
+
+    cart.splice(index, 1);
+
+    saveCart();
+
+    location.reload();
 
 }
