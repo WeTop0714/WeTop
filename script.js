@@ -11,7 +11,20 @@ function saveCart() {
 }
 
 // Add product
-function addToCart(name, price) {
+function addToCart(name, price){
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    saveCart();
+
+    console.log(cart);
+
+    alert("✅ " + name + " added to cart!");
+
+}
 
     cart.push({
         name: name,
