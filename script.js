@@ -5,7 +5,14 @@ alert("Script Loaded!");
 // ===============================
 
 // Load cart from Local Storage
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = [];
+
+try {
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
+} catch (e) {
+    cart = [];
+    localStorage.removeItem("cart");
+}
 
 // Save cart
 function saveCart() {
