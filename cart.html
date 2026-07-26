@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Cart | WeTop</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-bag-shopping"></i>
+<h2>WeTop</h2>
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Search products...">
+<button>
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
+</div>
+
+<div class="nav-icons">
+
+<div>
+<i class="fa-regular fa-heart"></i>
+<a href="wishlist.html">Wishlist</a>
+</div>
+
+<div>
+<i class="fa-solid fa-cart-shopping"></i>
+<a href="cart.html">Cart</a>
+</div>
+
+<div>
+<i class="fa-regular fa-user"></i>
+<a href="login.html">Account</a>
+</div>
+
+</div>
+
+</header>
+
+<nav class="menu">
+
+<a href="index.html">Home</a>
+
+<a href="products.html">Products</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<section class="cart-page">
+
+<h1>Your Shopping Cart</h1>
+
+<div id="cartItems"></div>
+
+<h2 id="cartTotal">Total: ₹0</h2>
+
+<div class="cart-buttons">
+
+<a href="products.html" class="btn">Continue Shopping</a>
+
+<button class="btn">Checkout</button>
+
+</div>
+
+</section>
+<script>
+
+const cart = getCart();
+
+const cartContainer = document.getElementById("cartItems");
+
+const totalElement = document.getElementById("cartTotal");
+
+let total = 0;
+
+if(cart.length===0){
+
+cartContainer.innerHTML="<h2>Your cart is empty 🛒</h2>";
+
+}else{
+
+cart.forEach((product,index)=>{
+
+total+=product.price;
+
+cartContainer.innerHTML+=`
+
+<div class="cart-item">
+
+<h3>${product.name}</h3>
+
+<p>₹${product.price}</p>
+
+<button onclick="removeFromCart(${index})">
+
+Remove
+
+</button>
+
+</div>
+
+`;
+
+});
+
+}
+
+totalElement.innerHTML="Total : ₹"+total;
+<script src="script.js"></script>
+
+<script>
+...
+</script>
