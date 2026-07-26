@@ -13,20 +13,20 @@ function saveCart(cart) {
 }
 
 // Add product to cart
-function addToCart(name, price) {
+function addToCart(name, price, image) {
 
     let cart = getCart();
 
     cart.push({
         name: name,
-        price: price
+        price: price,
+        image: image
     });
 
     saveCart(cart);
 
     alert("✅ " + name + " added to cart!");
 }
-
 // Remove product
 function removeFromCart(index) {
 
