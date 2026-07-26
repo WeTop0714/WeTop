@@ -3,107 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cart | WeTop</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<title>Shopping Cart | WeTop</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<h1 style="text-align:center; margin-top:30px;">🛒 Your Shopping Cart</h1>
 
-<div class="logo">
-<i class="fa-solid fa-bag-shopping"></i>
-<h2>WeTop</h2>
-</div>
+<div id="cartContainer" style="max-width:800px; margin:30px auto; padding:20px;"></div>
 
-<div class="search-box">
-<input type="text" placeholder="Search products...">
-<button><i class="fa-solid fa-magnifying-glass"></i></button>
-</div>
+<h2 id="totalPrice" style="text-align:center;">Total: ₹0</h2>
 
-<div class="nav-icons">
+<div style="text-align:center; margin-top:20px;">
 
-<div>
-<i class="fa-regular fa-heart"></i>
-<a href="wishlist.html">Wishlist</a>
-</div>
+<button onclick="clearCart()">Clear Cart</button>
 
-<div>
-<i class="fa-solid fa-cart-shopping"></i>
-<a href="cart.html">Cart</a>
-</div>
-
-<div>
-<i class="fa-regular fa-user"></i>
-<a href="login.html">Account</a>
-</div>
-
-</div>
-
-</header>
-
-<nav class="menu">
-<a href="index.html">Home</a>
-<a href="products.html">Products</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-<section class="cart-page">
-
-<h1>Your Shopping Cart</h1>
-
-<div id="cartItems"></div>
-
-<h2 id="cartTotal">Total: ₹0</h2>
-
-<div class="cart-buttons">
-
-<a href="products.html" class="btn">
-Continue Shopping
+<a href="products.html">
+<button>Continue Shopping</button>
 </a>
 
-<button class="btn">
-Checkout
-</button>
-
 </div>
-
-</section>
 
 <script src="script.js"></script>
 
 <script>
 
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const cart = getCart();
 
-const cartItems = document.getElementById("cartItems");
+const container = document.getElementById("cartContainer");
 
-const cartTotal = document.getElementById("cartTotal");
+const total = document.getElementById("totalPrice");
 
-let total = 0;
+let sum = 0;
 
-if(cart.length===0){
+if(cart.length === 0){
 
-cartItems.innerHTML="<h2>Your cart is empty 🛒</h2>";
+container.innerHTML = "<h2>Your cart is empty 🛒</h2>";
 
 }else{
 
-cart.forEach(function(product,index){
+cart.forEach((item,index)=>{
 
-total+=product.price;
+sum += item.price;
 
-cartItems.innerHTML+=`
-<div class="cart-item">
-<h3>${product.name}</h3>
-<p>₹${product.price}</p>
+container.innerHTML += `
+<div style="border:1px solid #ddd;padding:15px;margin-bottom:15px;border-radius:10px;">
+<h3>${item.name}</h3>
+<p>Price: ₹${item.price}</p>
 <button onclick="removeFromCart(${index})">Remove</button>
 </div>
 `;
@@ -112,7 +60,7 @@ cartItems.innerHTML+=`
 
 }
 
-cartTotal.innerHTML="Total : ₹"+total;
+total.innerHTML = "Total: ₹" + sum;
 
 </script>
 
