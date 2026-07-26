@@ -29,7 +29,7 @@ function addToCart(name, price){
 
     saveCart();
 
-    console.log(cart);
+    alert(localStorage.getItem("cart"));
 
     alert("✅ " + name + " added to cart!");
 }
