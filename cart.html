@@ -82,7 +82,7 @@ Checkout
 
 <script>
 
-const cart = getCart();
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const cartItems = document.getElementById("cartItems");
 
