@@ -10,9 +10,61 @@
 
 <body>
 
-<h1 style="text-align:center; margin-top:30px;">🛒 Your Shopping Cart</h1>
+<div class="cart-header">
 
-<div id="cartContainer" style="max-width:800px; margin:30px auto; padding:20px;"></div>
+<h1>🛒 Shopping Cart</h1>
+
+<p>Review your items before checkout.</p>
+
+</div>
+
+<div class="cart-layout">
+
+<div id="cartContainer"></div>
+
+<div class="order-summary">
+
+<h2>Order Summary</h2>
+
+<hr>
+
+<p>
+Subtotal
+<span id="subtotalPrice">₹0</span>
+</p>
+
+<p>
+Shipping
+<span style="color:green;">FREE</span>
+</p>
+
+<p>
+Tax
+<span>₹0</span>
+</p>
+
+<hr>
+
+<h3>
+Total
+<span id="totalPrice">₹0</span>
+</h3>
+
+<input
+type="text"
+placeholder="Coupon Code">
+
+<button class="checkout-btn">
+Apply Coupon
+</button>
+
+<button class="checkout-btn">
+Proceed to Checkout
+</button>
+
+</div>
+
+</div>
 
 <h2 id="totalPrice" style="text-align:center;">Total: ₹0</h2>
 
