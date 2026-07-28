@@ -1275,3 +1275,71 @@ border-color:var(--primary);
 box-shadow:0 20px 45px rgba(59,130,246,.25);
 
 }
+/* ==========================
+   Product Icons
+========================== */
+
+.product-card{
+position:relative;
+overflow:hidden;
+}
+
+.product-icons{
+
+position:absolute;
+
+top:15px;
+
+right:15px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+z-index:2;
+
+}
+
+.product-icons button{
+
+width:42px;
+
+height:42px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(22,27,34,.85);
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+backdrop-filter:blur(10px);
+
+}
+
+.product-icons button:hover{
+
+background:var(--primary);
+
+transform:scale(1.12);
+
+}
+
+.product-card img{
+
+transition:.4s;
+
+}
+
+.product-card:hover img{
+
+transform:scale(1.08);
+
+}
