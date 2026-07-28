@@ -865,3 +865,87 @@ font-weight:700;
 letter-spacing:.5px;
 
 }
+/* ===== Hero Premium Upgrade ===== */
+
+.hero-tag{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:rgba(59,130,246,.15);
+
+border:1px solid #3b82f6;
+
+color:#60a5fa;
+
+border-radius:50px;
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:18px;
+
+}
+
+.gradient-text{
+
+background:linear-gradient(90deg,#60a5fa,#22d3ee,#ffffff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+background-clip:text;
+
+}
+
+.shop-btn,
+.deal-btn{
+
+display:inline-block;
+
+text-decoration:none;
+
+padding:14px 30px;
+
+border-radius:12px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.shop-btn{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+.shop-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 30px rgba(37,99,235,.45);
+
+}
+
+.deal-btn{
+
+background:transparent;
+
+border:2px solid #2563eb;
+
+color:white;
+
+}
+
+.deal-btn:hover{
+
+background:#2563eb;
+
+}
