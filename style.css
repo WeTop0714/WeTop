@@ -1071,3 +1071,130 @@ justify-content:center;
 }
 
 }
+/* ==========================
+   Flash Sale
+========================== */
+
+.flash-sale{
+
+margin:70px auto;
+
+width:90%;
+
+padding:40px;
+
+border-radius:24px;
+
+background:linear-gradient(135deg,#2563eb,#111827);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:40px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.4);
+
+}
+
+.flash-left h2{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+.flash-left p{
+
+font-size:22px;
+
+}
+
+.flash-left span{
+
+color:#facc15;
+
+font-weight:700;
+
+}
+
+.flash-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:15px 30px;
+
+background:white;
+
+color:#111827;
+
+text-decoration:none;
+
+font-weight:700;
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+.flash-btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+#countdown{
+
+display:flex;
+
+gap:20px;
+
+}
+
+#countdown div{
+
+background:rgba(255,255,255,.12);
+
+padding:20px;
+
+border-radius:16px;
+
+text-align:center;
+
+min-width:90px;
+
+}
+
+#countdown span{
+
+display:block;
+
+font-size:36px;
+
+font-weight:700;
+
+}
+
+#countdown small{
+
+color:#d1d5db;
+
+}
+
+@media(max-width:900px){
+
+.flash-sale{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+}
