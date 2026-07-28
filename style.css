@@ -1198,3 +1198,80 @@ text-align:center;
 }
 
 }
+/* ==========================
+   Features Section
+========================== */
+
+.features{
+
+width:90%;
+
+margin:90px auto;
+
+text-align:center;
+
+}
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:25px;
+
+margin-top:45px;
+
+}
+
+.feature-card{
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+padding:35px 25px;
+
+border-radius:22px;
+
+transition:.35s;
+
+box-shadow:var(--shadow);
+
+}
+
+.feature-card i{
+
+font-size:46px;
+
+color:var(--primary);
+
+margin-bottom:20px;
+
+}
+
+.feature-card h3{
+
+font-size:24px;
+
+margin-bottom:12px;
+
+}
+
+.feature-card p{
+
+color:var(--text-light);
+
+line-height:1.7;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-10px);
+
+border-color:var(--primary);
+
+box-shadow:0 20px 45px rgba(59,130,246,.25);
+
+}
