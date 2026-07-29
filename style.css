@@ -2157,3 +2157,84 @@ margin:auto;
 }
 
 }
+@media (max-width:768px){
+
+section{
+
+width:100%;
+
+padding:50px 20px;
+
+box-sizing:border-box;
+
+overflow:hidden;
+
+}
+
+.featured,
+.features,
+.categories,
+.reviews,
+.newsletter,
+.flash-sale{
+
+width:100%;
+
+margin:0 auto 40px;
+
+}
+
+.section-title{
+
+font-size:30px;
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.flash-sale{
+
+padding:30px 20px;
+
+border-radius:20px;
+
+}
+
+.newsletter-box{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.newsletter-box input,
+.newsletter-box button{
+
+width:100%;
+
+}
+
+footer{
+
+padding:40px 20px;
+
+}
+
+.footer-container{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:30px;
+
+text-align:center;
+
+}
+
+}
