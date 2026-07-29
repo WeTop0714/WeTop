@@ -241,3 +241,22 @@ addToCart(currentProduct.name,currentProduct.price,currentProduct.image);
 modal.style.display = "none";
 
 };
+// ===========================
+// Loader
+// ===========================
+
+window.addEventListener("load",function(){
+
+const loader=document.getElementById("loader");
+
+if(loader){
+
+setTimeout(function(){
+
+loader.classList.add("hide");
+
+},700);
+
+}
+
+});
