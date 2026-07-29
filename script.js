@@ -81,3 +81,40 @@ totalSeconds--;
 }
 
 },1000);
+// =====================
+// Product Slider
+// =====================
+
+const slider=document.getElementById("productSlider");
+
+const next=document.getElementById("nextBtn");
+
+const prev=document.getElementById("prevBtn");
+
+if(slider && next && prev){
+
+next.onclick=function(){
+
+slider.scrollBy({
+
+left:350,
+
+behavior:"smooth"
+
+});
+
+};
+
+prev.onclick=function(){
+
+slider.scrollBy({
+
+left:-350,
+
+behavior:"smooth"
+
+});
+
+};
+
+}
