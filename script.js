@@ -260,3 +260,34 @@ loader.classList.add("hide");
 }
 
 });
+// ===========================
+// Live Product Search
+// ===========================
+
+function searchProducts(){
+
+const input=document.getElementById("searchInput");
+
+if(!input) return;
+
+const filter=input.value.toLowerCase();
+
+const products=document.querySelectorAll(".product-card");
+
+products.forEach(function(product){
+
+const name=product.querySelector("h3").innerText.toLowerCase();
+
+if(name.includes(filter)){
+
+product.style.display="block";
+
+}else{
+
+product.style.display="none";
+
+}
+
+});
+
+}
