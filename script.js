@@ -24,7 +24,7 @@ function addToCart(name, price, image){
     saveCart();
     updateCartCount();
 
-    alert("✅ " + name + " added to cart!");
+    showToast("✅ " + name + " added to cart!");
 
 }
 // Remove product
