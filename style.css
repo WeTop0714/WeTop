@@ -1495,3 +1495,24 @@ transform:scale(1.15);
 transition:.3s;
 
 }
+/* ==========================
+   Scroll Reveal Animation
+========================== */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(70px);
+
+transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
