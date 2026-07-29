@@ -118,3 +118,30 @@ behavior:"smooth"
 };
 
 }
+// ===========================
+// Scroll Reveal
+// ===========================
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+
+reveals.forEach(function(section){
+
+const top = section.getBoundingClientRect().top;
+
+const visible = window.innerHeight - 120;
+
+if(top < visible){
+
+section.classList.add("active");
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
