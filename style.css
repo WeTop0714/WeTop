@@ -1516,3 +1516,126 @@ opacity:1;
 transform:translateY(0);
 
 }
+/* ==========================
+   Premium Header v2
+========================== */
+
+header{
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+background:rgba(15,23,42,.75);
+
+backdrop-filter:blur(16px);
+
+-webkit-backdrop-filter:blur(16px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+padding:16px 8%;
+
+transition:.3s;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.logo i{
+
+font-size:28px;
+
+color:var(--primary);
+
+}
+
+.logo h2{
+
+font-size:28px;
+
+font-weight:700;
+
+}
+
+.nav-icons{
+
+display:flex;
+
+gap:28px;
+
+}
+
+.nav-icons div{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.nav-icons div:hover{
+
+transform:translateY(-2px);
+
+color:var(--primary);
+
+}
+
+.menu{
+
+position:sticky;
+
+top:76px;
+
+z-index:999;
+
+background:rgba(15,23,42,.9);
+
+backdrop-filter:blur(12px);
+
+padding:14px 8%;
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+font-weight:600;
+
+color:var(--text);
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:var(--primary);
+
+}
