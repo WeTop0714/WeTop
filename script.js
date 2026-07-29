@@ -145,3 +145,20 @@ section.classList.add("active");
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
+// ===========================
+// Live Cart Counter
+// ===========================
+
+function updateCartCount(){
+
+const badge=document.getElementById("cart-count");
+
+if(!badge) return;
+
+const cart=getCart();
+
+badge.innerText=cart.length;
+
+}
+
+updateCartCount();
