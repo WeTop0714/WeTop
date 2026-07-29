@@ -13,28 +13,27 @@ function saveCart(cart) {
 }
 
 // Add product to cart
-function addToCart(name, price, image) {
-
-    let cart = getCart();
+function addToCart(name, price, image){
 
     cart.push({
-        name: name,
-        price: price,
-        image: image
+        name:name,
+        price:price,
+        image:image
     });
 
-    saveCart(cart);
+    saveCart();
+    updateCartCount();
 
     alert("✅ " + name + " added to cart!");
+
 }
 // Remove product
-function removeFromCart(index) {
+function removeFromCart(index){
 
-    let cart = getCart();
+    cart.splice(index,1);
 
-    cart.splice(index, 1);
-
-    saveCart(cart);
+    saveCart();
+    updateCartCount();
 
     location.reload();
 
