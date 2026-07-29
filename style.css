@@ -1639,3 +1639,34 @@ transition:.3s;
 color:var(--primary);
 
 }
+/* ==========================
+   Cart Count Badge
+========================== */
+
+#cart-count{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+min-width:22px;
+
+height:22px;
+
+margin-left:6px;
+
+padding:0 6px;
+
+border-radius:999px;
+
+background:#ef4444;
+
+color:white;
+
+font-size:12px;
+
+font-weight:700;
+
+}
