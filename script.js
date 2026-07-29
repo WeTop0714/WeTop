@@ -182,3 +182,62 @@ toast.classList.remove("show");
 },2500);
 
 }
+// ===========================
+// Quick View Modal
+// ===========================
+
+const modal = document.getElementById("productModal");
+
+const modalImage = document.getElementById("modalImage");
+
+const modalTitle = document.getElementById("modalTitle");
+
+const modalPrice = document.getElementById("modalPrice");
+
+const modalCartBtn = document.getElementById("modalCartBtn");
+
+const closeModal = document.querySelector(".close-modal");
+
+let currentProduct = null;
+
+function openQuickView(name, price, image){
+
+currentProduct = {
+name:name,
+price:price,
+image:image
+};
+
+modalImage.src = image;
+
+modalTitle.innerText = name;
+
+modalPrice.innerText = "₹" + price;
+
+modal.style.display = "flex";
+
+}
+
+closeModal.onclick = function(){
+
+modal.style.display = "none";
+
+};
+
+window.onclick = function(event){
+
+if(event.target == modal){
+
+modal.style.display = "none";
+
+}
+
+};
+
+modalCartBtn.onclick = function(){
+
+addToCart(currentProduct.name,currentProduct.price,currentProduct.image);
+
+modal.style.display = "none";
+
+};
