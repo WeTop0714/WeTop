@@ -1800,3 +1800,84 @@ font-size:16px;
 cursor:pointer;
 
 }
+/* ==========================
+   Loader
+========================== */
+
+#loader{
+
+position:fixed;
+
+inset:0;
+
+background:#0f172a;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999999;
+
+transition:.6s;
+
+}
+
+.loader-logo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+color:white;
+
+font-size:30px;
+
+margin-bottom:25px;
+
+}
+
+.loader-logo i{
+
+color:var(--primary);
+
+}
+
+.loader-spinner{
+
+width:60px;
+
+height:60px;
+
+border:5px solid rgba(255,255,255,.15);
+
+border-top:5px solid var(--primary);
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+#loader.hide{
+
+opacity:0;
+
+visibility:hidden;
+
+}
