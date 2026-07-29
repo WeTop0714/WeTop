@@ -1670,3 +1670,44 @@ font-size:12px;
 font-weight:700;
 
 }
+/* ==========================
+   Toast Notification
+========================== */
+
+#toast{
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+background:#22c55e;
+
+color:white;
+
+padding:16px 24px;
+
+border-radius:12px;
+
+font-weight:600;
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.35s;
+
+z-index:9999;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+#toast.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
