@@ -881,3 +881,30 @@ border-top:1px solid var(--border);
 color:var(--text2);
 
 }
+/* Slider Buttons */
+
+.slider-buttons{
+    display:flex;
+    gap:12px;
+}
+
+.slider-buttons button{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:var(--card);
+    color:var(--text);
+    border:1px solid var(--border);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    transition:.3s;
+}
+
+.slider-buttons button:hover{
+    background:var(--primary);
+    border-color:var(--primary);
+    color:white;
+    transform:scale(1.08);
+}
