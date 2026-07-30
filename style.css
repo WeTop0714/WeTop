@@ -515,10 +515,20 @@ color:gray;
 }
 
 .product-card button{
+    margin:20px;
+    width:calc(100% - 40px);
+    padding:14px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
 
-margin:20px;
-
-width:calc(100% - 
+.product-card button:hover{
+    background:var(--primary-dark);
+}
 /* ===========================
    Categories
 =========================== */
