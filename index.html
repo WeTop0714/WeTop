@@ -48,7 +48,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <div class="search-box">
 
-<input type="text" placeholder="Search for products...">
+<input
+    id="searchInput"
+    type="text"
+    placeholder="Search for products..."
+    onkeyup="searchProducts()">
 
 <button>
 
@@ -260,7 +264,13 @@ onclick="openQuickView(
 <span>₹3,199</span>
 </p>
 
-<button>Add to Cart</button>
+<button onclick="addToCart(
+'Nike Running Shoes',
+2499,
+'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500'
+)">
+Add to Cart
+</button>
 
 </div>
 
@@ -281,7 +291,13 @@ onclick="openQuickView(
 <span>₹6,499</span>
 </p>
 
-<button>Add to Cart</button>
+<button onclick="addToCart(
+'Smart Watch',
+4999,
+'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500'
+)">
+Add to Cart
+</button>
 
 </div>
 
@@ -302,7 +318,13 @@ onclick="openQuickView(
 <span>₹4,299</span>
 </p>
 
-<button>Add to Cart</button>
+<button onclick="addToCart(
+'Wireless Headphones',
+3499,
+'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500'
+)">
+Add to Cart
+</button>
 
 </div>
 
@@ -323,7 +345,13 @@ onclick="openQuickView(
 <span>₹29,999</span>
 </p>
 
-<button>Add to Cart</button>
+<button onclick="addToCart(
+'Smartphone',
+24999,
+'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500'
+)">
+Add to Cart
+</button>
 
 </div>
 
