@@ -14,7 +14,6 @@ function saveCart(cart) {
 
 // Add product to cart
 function addToCart(name, price, image){
-function addToCart(name, price, image){
 
     let cart = getCart();
 
@@ -25,11 +24,9 @@ function addToCart(name, price, image){
     });
 
     saveCart(cart);
-
     updateCartCount();
 
     showToast("✅ " + name + " added to cart!");
-
 }
 // Remove product
 function removeFromCart(index){
