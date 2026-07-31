@@ -300,3 +300,4 @@ product.style.display="none";
 });
 
 }
+console.log("script.js loaded successfully");
