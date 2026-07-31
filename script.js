@@ -14,14 +14,18 @@ function saveCart(cart) {
 
 // Add product to cart
 function addToCart(name, price, image){
+function addToCart(name, price, image){
+
+    let cart = getCart();
 
     cart.push({
-        name:name,
-        price:price,
-        image:image
+        name: name,
+        price: price,
+        image: image
     });
 
-    saveCart();
+    saveCart(cart);
+
     updateCartCount();
 
     showToast("✅ " + name + " added to cart!");
@@ -30,9 +34,12 @@ function addToCart(name, price, image){
 // Remove product
 function removeFromCart(index){
 
+    let cart = getCart();
+
     cart.splice(index,1);
 
-    saveCart();
+    saveCart(cart);
+
     updateCartCount();
 
     location.reload();
@@ -42,7 +49,9 @@ function removeFromCart(index){
 // Clear cart
 function clearCart() {
 
-    localStorage.removeItem("cart");
+    saveCart([]);
+
+    updateCartCount();
 
     location.reload();
 
